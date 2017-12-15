@@ -1,0 +1,48 @@
+<div class="search-header">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <form>
+          <h2 class="v-center">Search</h2>
+          <p class="lead">Find a Show by name</p>
+
+          <div class="input-group">
+            <input type="text" class="form-control input-md" ng-model="name"/>
+            <span class="input-group-btn">
+            	<button type="submit" class="btn btn-md btn-primary pull-right" ng-click="search()">
+            		Search
+            	</button>
+            </span>
+          </div>
+      </form>
+    </div>
+    <p ng-show="showglob.length === 0">
+    <i>* No Results Found</i>
+    </p>
+  </form>
+
+  <div ng-if="showglob.length" class="more-results-block">
+    <p>
+      /// more results
+      <hr/>
+    </p>
+    <div>
+      <p ng-repeat="alt in showglob">
+        <a style="cursor: pointer" class="h5" ng-click="showglob=alt">
+          {{alt.name}}
+        </a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    <div class="col-md-12">
+      <div show-preview showglob="swap"></div>
+      
+    </div>
+  </div>
+</div>
+</div>

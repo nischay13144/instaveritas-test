@@ -1,0 +1,14 @@
+{
+  "name": "Instaveritas",
+  "version": "1.0.0",
+  "description": "Instaveritas Interview App using TV Maze API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.16.2",
+    "superagent": "^3.8.2"
+  }
+}

@@ -1,0 +1,18 @@
+<div class="container">
+	      	<b>{{show.name}}</b><br/>
+					<p ng-bind-html="show.genres.toString()|trustHtml"></p><br/>
+					<img src="{{show.image.medium||'../image/default.png'}}" alt="No text to display"/><br/></br>
+					<b>Summary:</b><br/>
+					<p ng-bind-html="show.summary|trustHtml"></p>
+					<br/>
+					<br/>
+					<b>Cast:</b><br/>
+					<div ng-repeat="cast in show._embedded.cast">
+					<br/>Real Name:{{cast.person.name}}<br/>
+					Screen Name:{{cast.character.name}}<br/>
+					<div ng-if="cast.person.image.medium">
+					  <img src="{{cast.person.image.medium||'../image/default.png'}}"/><br/><br/>
+					</div>
+
+
+					</div>
